@@ -92,10 +92,9 @@ const COLLAB_LABELS: Record<CollabType, string> = {
 
 // ── Mini match card ───────────────────────────────────────────────────────────
 
-function MiniMatchCard({ match, index }: { match: typeof MOCK_MATCHES[number]; index: number }) {
-  const startup = match.startup;
-  const name    = startup?.companyName ?? "MediAI Vietnam";
-  const sector  = startup?.industry ?? "HealthTech";
+function MiniMatchCard({ match, index }: { match: any; index: number }) {
+  const name    = match.name ?? "MediAI Vietnam";
+  const sector  = match.sector ?? "HealthTech";
 
   return (
     <motion.div
@@ -117,14 +116,14 @@ function MiniMatchCard({ match, index }: { match: typeof MOCK_MATCHES[number]; i
         <p className="font-semibold text-foreground text-sm truncate">{name}</p>
         <div className="flex items-center gap-2 mt-1">
           <span className="badge-primary text-xs">{sector}</span>
-          {match.collabTypes.slice(0, 1).map((ct) => (
-            <span key={ct} className="badge-accent text-xs">{COLLAB_LABELS[ct]}</span>
+          {match.collabTypes?.slice(0, 1).map((ct: any) => (
+            <span key={ct} className="badge-accent text-xs">{COLLAB_LABELS[ct as CollabType]}</span>
           ))}
         </div>
       </div>
 
       {/* Score */}
-      <ScoreCircle score={match.score} />
+      <ScoreCircle score={match.matchScore} />
     </motion.div>
   );
 }
@@ -136,9 +135,26 @@ export default function PartnerDashboardPage() {
   const { user } = useAuth();
   const { getMutualMatches } = useProfileStore();
 
+  const [matches, setMatches] = React.useState<any[]>([]);
+  const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    fetch("/api/matches?type=partner", {
+      headers: { Authorization: `Bearer ${localStorage.getItem("sonic_token")}` }
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (Array.isArray(data)) {
+          setMatches(data.sort((a, b) => b.matchScore - a.matchScore));
+        }
+      })
+      .catch((err) => console.error("Failed to fetch matches:", err))
+      .finally(() => setLoading(false));
+  }, []);
+
   // Data
-  const topMatches = [...MOCK_MATCHES].reverse().slice(0, 3);
-  const matchCount    = MOCK_MATCHES.length;
+  const topMatches = matches.slice(0, 3);
+  const matchCount    = matches.length;
   
   // Mutual matches logic
   const mutualMatchIds = getMutualMatches();
@@ -163,7 +179,7 @@ export default function PartnerDashboardPage() {
     >
       <div className="space-y-8">
         {/* Profile completion prompt */}
-        {isProfileDraft && (
+        {isProfileDraft && !loading && (
           <motion.div
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}

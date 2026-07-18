@@ -256,7 +256,7 @@ export default function PartnerMatchesPage() {
                     {/* Score & Close button */}
                     <div className="absolute top-8 right-8 flex items-center gap-4 z-50">
                       <div className="w-14 h-14 rounded-full border-4 border-white flex items-center justify-center bg-white/20 backdrop-blur-md shadow-xl">
-                        <span className="text-white font-extrabold text-lg">{activeStartup.score}%</span>
+                        <span className="text-white font-extrabold text-lg">{activeStartup.matchScore || 90}%</span>
                       </div>
                       <button 
                         onClick={closeModal}
@@ -352,21 +352,11 @@ export default function PartnerMatchesPage() {
                             </div>
                           </div>
 
-                          <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">Compatibility Breakdown</h3>
-                          <div className="flex flex-col gap-4">
-                            {['tech', 'market', 'funding'].map(k => {
-                              const label = k === 'tech' ? 'Technology fit' : k === 'market' ? 'Market fit' : 'Funding fit';
-                              const val = activeStartup.breakdown[k as keyof typeof activeStartup.breakdown];
-                              return (
-                                <div key={k} className="flex items-center gap-4">
-                                  <div className="w-32 text-sm font-semibold text-slate-500">{label}</div>
-                                  <div className="flex-1 h-3 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
-                                    <div className="h-full rounded-full bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)]" style={{ width: `${val}%` }} />
-                                  </div>
-                                  <div className="w-12 text-right font-mono font-bold text-slate-700 dark:text-slate-300">{val}%</div>
-                                </div>
-                              )
-                            })}
+                          <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">Match Reasoning</h3>
+                          <div className="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6">
+                            <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+                              {activeStartup.shortReason || `This startup fits your collaboration goals and focus areas well.`}
+                            </p>
                           </div>
                         </div>
 

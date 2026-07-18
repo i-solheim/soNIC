@@ -213,7 +213,7 @@ export default function StartupMatchesPage() {
                       </div>
                       <div className="text-white">
                         <h2 className="text-4xl font-extrabold tracking-tight drop-shadow-md m-0">{partner.orgName}</h2>
-                        <p className="text-lg font-medium opacity-90 mt-1">{displayType}</p>
+                        <p className="text-lg font-medium opacity-90 mt-1">{partner.industries?.[0] || partner.orgType.replace("_", " ")}</p>
                       </div>
                     </div>
 
@@ -353,7 +353,7 @@ export default function StartupMatchesPage() {
                       <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-4">Match Reasoning</h3>
                       <div className="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6">
                         <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
-                          {activePartner.matchReason || `Your startup's trajectory aligns strongly with ${activePartner.orgName}'s current focus areas and target market.`}
+                          {activePartner.shortReason || `Your startup's trajectory aligns strongly with ${activePartner.orgName}'s current focus areas and target market.`}
                         </p>
                       </div>
                     </div>

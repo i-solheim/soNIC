@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -71,11 +72,28 @@ export default function StartupDashboardPage() {
   const { t } = useI18n();
   const { getMutualMatches } = useProfileStore();
 
+  const [matches, setMatches] = React.useState<any[]>([]);
+  const [loading, setLoading] = React.useState(true);
+
+  React.useEffect(() => {
+    fetch("/api/matches?type=startup", {
+      headers: { Authorization: `Bearer ${localStorage.getItem("sonic_token")}` }
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (Array.isArray(data)) {
+          setMatches(data.sort((a, b) => b.matchScore - a.matchScore));
+        }
+      })
+      .catch((err) => console.error("Failed to fetch matches:", err))
+      .finally(() => setLoading(false));
+  }, []);
+
   const profile = MOCK_STARTUP_PROFILE;
-  const topMatch = [...MOCK_MATCHES].sort((a, b) => b.score - a.score)[0];
+  const topMatch = matches[0];
   const nextMeeting = MOCK_MEETINGS.filter((m) => m.status === "scheduled")[0];
 
-  const activeMatches = MOCK_MATCHES.length;
+  const activeMatches = matches.length;
   const scheduledMeetings = MOCK_MEETINGS.filter((m) => m.status === "scheduled").length;
   const aiInsight = (profile.aiSummary ?? "").slice(0, 150);
 
@@ -91,7 +109,7 @@ export default function StartupDashboardPage() {
       <div className="space-y-8">
         
         {/* 1. Top Match This Week (Top AI Recommendation) */}
-        {topMatch && (
+        {!loading && topMatch && (
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -114,24 +132,24 @@ export default function StartupDashboardPage() {
               <div className="flex items-start gap-4 p-4 rounded-xl bg-surface border border-border">
                 {/* Score badge */}
                 <div className="w-16 h-16 rounded-full bg-[var(--color-success)] flex flex-col items-center justify-center flex-shrink-0 shadow-md">
-                  <span className="text-lg font-bold text-white leading-none">{topMatch.score}%</span>
+                  <span className="text-lg font-bold text-white leading-none">{topMatch.matchScore}%</span>
                   <span className="text-[10px] text-white/80 mt-0.5">match</span>
                 </div>
 
                 {/* Info */}
                 <div className="flex-1 min-w-0">
                   <p className="font-bold text-foreground text-lg truncate">
-                    {topMatch.partner?.orgName ?? "—"}
+                    {topMatch.orgName || "—"}
                   </p>
                   <div className="flex flex-wrap gap-1.5 mt-2">
-                    {topMatch.collabTypes.map((ct, i) => (
+                    {topMatch.collabTypes?.map((ct: string, i: number) => (
                       <span key={ct} className={i === 0 ? "badge-accent" : "badge-primary"}>
                         {ct.charAt(0).toUpperCase() + ct.slice(1)}
                       </span>
                     ))}
                   </div>
                   <p className="text-sm text-[var(--color-text-muted)] mt-3">
-                    {topMatch.aiExplanation}
+                    {topMatch.shortReason}
                   </p>
                 </div>
               </div>

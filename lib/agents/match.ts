@@ -8,7 +8,7 @@ import { z } from "zod";
 const SYSTEM_PROMPT = `You are a senior matchmaking specialist at NIC (National Innovation Center) Vietnam.
 Your job is to score the compatibility between one startup and a list of partner organizations.
 
-You MUST respond with ONLY a valid JSON array. No markdown, no explanation, no extra text.
+You MUST respond with ONLY a valid JSON array. No markdown, no explanation, no extra text. ENSURE all quotes within string values are escaped.
 
 For each organization provided, return a match object:
 
@@ -52,7 +52,7 @@ export async function matchStartupWithOrgs(
   const userPrompt = `Startup:\n${JSON.stringify(startup, null, 2)}\n\nOrganizations:\n${JSON.stringify(organizations, null, 2)}`;
 
   const raw = await callAIJson<MatchItem[]>(SYSTEM_PROMPT, userPrompt, {
-    temperature: 0.3,
+    temperature: 0,
     maxTokens: 2048,
   });
 
@@ -67,7 +67,7 @@ export async function matchStartupWithOrgs(
 const ORG_SYSTEM_PROMPT = `You are a senior matchmaking specialist at NIC (National Innovation Center) Vietnam.
 Your job is to score the compatibility between one partner organization and a list of candidate startups.
 
-You MUST respond with ONLY a valid JSON array. No markdown, no explanation, no extra text.
+You MUST respond with ONLY a valid JSON array. No markdown, no explanation, no extra text. ENSURE all quotes within string values are escaped.
 
 For each startup provided, return a match object:
 [
@@ -105,7 +105,7 @@ export async function matchOrgWithStartups(
   const userPrompt = `Organization:\n${JSON.stringify(organization, null, 2)}\n\nCandidate startups:\n${JSON.stringify(startups, null, 2)}`;
 
   const raw = await callAIJson<OrgMatchItem[]>(ORG_SYSTEM_PROMPT, userPrompt, {
-    temperature: 0.3,
+    temperature: 0,
     maxTokens: 2048,
   });
 
