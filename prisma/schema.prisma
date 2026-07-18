@@ -1,0 +1,163 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Profile {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  role      String   // "startup" | "partner" | "nic"
+  createdAt DateTime @default(now())
+  
+  // Relations
+  startup       Startup?
+  organization  Organization?
+  nicMeetings   Meeting[] @relation("NicStaffMeetings")
+  
+  // For backwards compatibility with old seeders if needed
+  name      String?
+  password  String?
+}
+
+model Startup {
+  id        String   @id @default(uuid())
+  userId    String?  @unique
+  profile   Profile? @relation(fields: [userId], references: [id], onDelete: SetNull)
+  name      String?
+
+  // ExtractProfileResponse fields
+  industry      String?
+  location      String?
+  stage         String?  // "bootstrapped" | "seed" | "series_a" | "series_b_plus"
+  employees     Int?
+  technology    String   @default("[]") // JSON string array
+  problem       String?
+  solution      String?
+  customerType  String   @default("[]") // JSON string array
+  market        String   @default("[]") // JSON string array
+  businessModel String?
+  fundingNeed   Float?
+  growth        String   @default("{}") // JSON string
+  goals         String   @default("[]") // JSON string array
+  capabilities  String   @default("{}") // JSON string
+
+  // AssessReadinessResponse fields
+  readinessScore        Int?
+  isProfileComplete     Boolean?
+  isEligibleForNic      Boolean?
+  eligibilityReason     String?
+  missingFields         String   @default("[]") // JSON string array
+  suggestedImprovements String   @default("[]") // JSON string array
+  recommendation        String?
+
+  // raw storage / audit
+  rawProfile    String?  // JSON string
+  rawReadiness  String?  // JSON string
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt @default(now())
+
+  // Relations
+  documents Document[]
+  matches   Match[]
+  meetings  Meeting[]
+  emails    Email[]
+}
+
+model Organization {
+  id        String   @id @default(uuid())
+  userId    String?  @unique
+  profile   Profile? @relation(fields: [userId], references: [id], onDelete: SetNull)
+  orgType   String   // "corporation" | "investor" | "university" | "research_institution"
+  name      String?
+  industry  String?
+  country   String?
+  preferredStartupStage String? // "bootstrapped" | "seed" | "series_a" | "series_b_plus"
+  budget    Float?
+  attrs     String   @default("{}") // JSON string for type-specific fields
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt @default(now())
+
+  // Relations
+  documents Document[]
+  matches   Match[]
+  meetings  Meeting[]
+  emails    Email[]
+}
+
+model Document {
+  id              String   @id @default(uuid())
+  startupId       String?
+  startup         Startup? @relation(fields: [startupId], references: [id], onDelete: Cascade)
+  organizationId  String?
+  organization    Organization? @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  
+  docType         String   // "pitch_deck" | "business_plan" | "website" | "other"
+  fileUrl         String
+  sourceText      String?  // parsed text, sent to /extract-profile
+  uploadedAt      DateTime @default(now())
+}
+
+model Match {
+  id              String   @id @default(uuid())
+  startupId       String
+  startup         Startup  @relation(fields: [startupId], references: [id], onDelete: Cascade)
+  organizationId  String
+  organization    Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  // MatchResult fields
+  score             Int?
+  breakdown         String   @default("{}") // JSON string
+  collaborationType String?  // "investment" | "pilot" | "research" | "distribution"
+  shortReason       String?
+
+  // ExplainMatchResponse fields
+  explanation            String?
+  suggestedCollaboration String?
+  risks                  String   @default("[]") // JSON string array
+  expectedRoi            String?  // "low" | "medium" | "high"
+  nextBestAction         String?
+
+  status    String   @default("pending") // "pending" | "reviewed" | "approved" | "rejected"
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt @default(now())
+
+  meetings Meeting[]
+  emails   Email[]
+
+  @@unique([startupId, organizationId])
+}
+
+model Meeting {
+  id              String   @id @default(uuid())
+  matchId         String?
+  match           Match?   @relation(fields: [matchId], references: [id], onDelete: Cascade)
+  startupId       String?
+  startup         Startup? @relation(fields: [startupId], references: [id])
+  organizationId  String?
+  organization    Organization? @relation(fields: [organizationId], references: [id])
+  nicStaffId      String?
+  nicStaff        Profile? @relation("NicStaffMeetings", fields: [nicStaffId], references: [id])
+  
+  scheduledTime   DateTime?
+  status          String   @default("proposed") // "proposed" | "confirmed" | "cancelled"
+  createdAt       DateTime @default(now())
+}
+
+model Email {
+  id              String   @id @default(uuid())
+  matchId         String?
+  match           Match?   @relation(fields: [matchId], references: [id], onDelete: Cascade)
+  startupId       String?
+  startup         Startup? @relation(fields: [startupId], references: [id])
+  organizationId  String?
+  organization    Organization? @relation(fields: [organizationId], references: [id])
+  
+  subject         String?
+  body            String?
+  sentAt          DateTime?
+}

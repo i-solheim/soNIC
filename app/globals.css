@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   BRAND TOKENS — Edit ONLY this section to rebrand soNIC
+   ============================================================ */
+:root {
+  /* Primary brand blue */
+  --color-primary: #073cad;
+  --color-primary-hover: #0530a0;
+  --color-primary-light: #e8effe;
+  --color-primary-fg: #ffffff;
+
+  /* Accent brand red */
+  --color-accent: #e33500;
+  --color-accent-hover: #c42e00;
+  --color-accent-light: #fde8e2;
+  --color-accent-fg: #ffffff;
+
+  /* Surfaces */
+  --color-bg: #ffffff;
+  --color-bg-dark: #0a1628;
+  --color-bg-dark-secondary: #0f1f3d;
+  --color-surface: #f5f5f5;
+  --color-surface-hover: #ececec;
+  --color-card: #ffffff;
+  --color-card-border: #e8effe;
+
+  /* Text */
+  --color-text: #0a1628;
+  --color-text-muted: #64748b;
+  --color-text-subtle: #94a3b8;
+  --color-text-on-dark: #f1f5f9;
+
+  /* Borders */
+  --color-border: #e2e8f0;
+  --color-border-strong: #cbd5e1;
+
+  /* Semantic */
+  --color-success: #16a34a;
+  --color-success-light: #dcfce7;
+  --color-warning: #d97706;
+  --color-warning-light: #fef3c7;
+  --color-info: #0ea5e9;
+  --color-info-light: #e0f2fe;
+
+  /* Misc */
+  --radius: 0.75rem;
+  --shadow-sm: 0 1px 2px rgba(7, 60, 173, 0.06);
+  --shadow-md: 0 4px 16px rgba(7, 60, 173, 0.10);
+  --shadow-lg: 0 8px 32px rgba(7, 60, 173, 0.15);
+  --shadow-glow: 0 0 24px rgba(7, 60, 173, 0.25);
+}
+/* ============================================================ */
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-surface);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border-strong);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+  }
+}
+
+@layer components {
+  /* ---- Buttons ---- */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl
+           font-semibold text-sm text-white transition-all duration-200
+           bg-primary hover:bg-[var(--color-primary-hover)]
+           shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-lg)]
+           hover:-translate-y-0.5 active:translate-y-0 focus:outline-none
+           focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl
+           font-semibold text-sm text-white transition-all duration-200
+           bg-accent hover:bg-[var(--color-accent-hover)]
+           shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-lg)]
+           hover:-translate-y-0.5 active:translate-y-0 focus:outline-none
+           focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl
+           font-semibold text-sm transition-all duration-200 border-2
+           border-primary text-primary bg-transparent
+           hover:bg-[var(--color-primary-light)]
+           hover:-translate-y-0.5 active:translate-y-0 focus:outline-none
+           focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl
+           font-medium text-sm transition-all duration-200
+           text-[var(--color-text-muted)] hover:text-foreground
+           hover:bg-surface focus:outline-none;
+  }
+
+  /* ---- Cards ---- */
+  .card {
+    @apply bg-card rounded-2xl border border-border p-6
+           shadow-[var(--shadow-sm)] transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply card hover:shadow-[var(--shadow-lg)] hover:-translate-y-1
+           hover:border-[var(--color-card-border)];
+  }
+
+  /* Glass card for dark backgrounds */
+  .card-glass {
+    @apply rounded-2xl border border-white/10 p-6
+           bg-white/5 backdrop-blur-md;
+  }
+
+  /* ---- Badges ---- */
+  .badge-primary {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold
+           bg-[var(--color-primary-light)] text-primary;
+  }
+
+  .badge-accent {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold
+           bg-[var(--color-accent-light)] text-accent;
+  }
+
+  .badge-success {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold
+           bg-[var(--color-success-light)] text-[var(--color-success)];
+  }
+
+  .badge-warning {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold
+           bg-[var(--color-warning-light)] text-[var(--color-warning)];
+  }
+
+  /* ---- Form inputs ---- */
+  .input {
+    @apply w-full px-4 py-3 rounded-xl border border-border bg-background
+           text-foreground text-sm placeholder:text-[var(--color-text-subtle)]
+           focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent
+           transition-all duration-200;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-foreground mb-1.5;
+  }
+
+  /* ---- Section layouts ---- */
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl font-bold text-foreground;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-[var(--color-text-muted)] mt-3;
+  }
+
+  /* ---- Dark hero section ---- */
+  .hero-dark {
+    background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-dark-secondary) 50%, #0d2857 100%);
+  }
+
+  /* ---- Gradient text ---- */
+  .gradient-text {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #3b6de8 50%, var(--color-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ---- Shimmer loading ---- */
+  .shimmer {
+    background: linear-gradient(90deg, var(--color-surface) 25%, var(--color-border) 50%, var(--color-surface) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s linear infinite;
+  }
+
+  /* ---- Score ring ---- */
+  .score-ring {
+    @apply relative inline-flex items-center justify-center;
+  }
+
+  /* ---- Sidebar ---- */
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium
+           transition-all duration-200 text-[var(--color-text-muted)]
+           hover:bg-[var(--color-primary-light)] hover:text-primary;
+  }
+
+  .sidebar-link-active {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium
+           bg-[var(--color-primary-light)] text-primary;
+  }
+
+  /* ---- Step indicator ---- */
+  .step-dot {
+    @apply w-8 h-8 rounded-full flex items-center justify-center text-xs font-bold
+           border-2 transition-all duration-300;
+  }
+
+  .step-dot-active {
+    @apply step-dot bg-primary border-primary text-white;
+  }
+
+  .step-dot-done {
+    @apply step-dot bg-[var(--color-success)] border-[var(--color-success)] text-white;
+  }
+
+  .step-dot-inactive {
+    @apply step-dot bg-surface border-border text-[var(--color-text-muted)];
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animation-delay-100 { animation-delay: 0.1s; }
+  .animation-delay-200 { animation-delay: 0.2s; }
+  .animation-delay-300 { animation-delay: 0.3s; }
+  .animation-delay-400 { animation-delay: 0.4s; }
+  .animation-delay-500 { animation-delay: 0.5s; }
+  .animation-delay-600 { animation-delay: 0.6s; }
+  .animation-delay-700 { animation-delay: 0.7s; }
+  .animation-delay-800 { animation-delay: 0.8s; }
+
+  .animate-fade-up-hidden {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}

@@ -1,0 +1,3746 @@
+[
+  {
+    "organization_id": "org-viettel",
+    "org_type": "corporation",
+    "name": "Viettel Group",
+    "description": "Viettel Group organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Enterprise",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for Viettel Group.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-viettel"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-fpt",
+    "org_type": "corporation",
+    "name": "FPT Corporation",
+    "description": "FPT Corporation organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Enterprise",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for FPT Corporation.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-fpt"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-vinfast",
+    "org_type": "corporation",
+    "name": "VinFast",
+    "description": "VinFast organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Enterprise",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for VinFast.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-vinfast"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-vnpt",
+    "org_type": "corporation",
+    "name": "VNPT",
+    "description": "VNPT organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Enterprise",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for VNPT.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-vnpt"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-samsung-vn",
+    "org_type": "corporation",
+    "name": "Samsung Vietnam",
+    "description": "Samsung Vietnam organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Enterprise",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for Samsung Vietnam.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-samsung-vn"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-nvidia-vn",
+    "org_type": "corporation",
+    "name": "NVIDIA Vietnam",
+    "description": "NVIDIA Vietnam organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Enterprise",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for NVIDIA Vietnam.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-nvidia-vn"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-antler",
+    "org_type": "investment_fund",
+    "name": "Antler Vietnam",
+    "description": "Antler Vietnam organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Growth",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for Antler Vietnam.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-antler"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-500global",
+    "org_type": "investment_fund",
+    "name": "500 Global Vietnam",
+    "description": "500 Global Vietnam organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Growth",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for 500 Global Vietnam.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-500global"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-doventures",
+    "org_type": "investment_fund",
+    "name": "Do Ventures",
+    "description": "Do Ventures organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Growth",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for Do Ventures.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-doventures"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-thinkzone",
+    "org_type": "investment_fund",
+    "name": "ThinkZone Ventures",
+    "description": "ThinkZone Ventures organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Growth",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for ThinkZone Ventures.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-thinkzone"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-vinacapital",
+    "org_type": "investment_fund",
+    "name": "VinaCapital Ventures",
+    "description": "VinaCapital Ventures organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Growth",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for VinaCapital Ventures.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-vinacapital"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-hust",
+    "org_type": "university",
+    "name": "HUST",
+    "description": "HUST organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Seed",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for HUST.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-hust"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-vnu",
+    "org_type": "university",
+    "name": "VNU Hanoi",
+    "description": "VNU Hanoi organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Seed",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for VNU Hanoi.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-vnu"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-fptu",
+    "org_type": "university",
+    "name": "FPT University",
+    "description": "FPT University organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Seed",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for FPT University.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-fptu"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-vinuni",
+    "org_type": "university",
+    "name": "VinUniversity",
+    "description": "VinUniversity organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Seed",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for VinUniversity.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-vinuni"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-vast",
+    "org_type": "research_institution",
+    "name": "VAST",
+    "description": "VAST organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Seed",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for VAST.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-vast"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-vinatom",
+    "org_type": "research_institution",
+    "name": "VINATOM",
+    "description": "VINATOM organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Seed",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for VINATOM.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-vinatom"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-nic-rnd",
+    "org_type": "research_institution",
+    "name": "NIC Innovation Research Center",
+    "description": "NIC Innovation Research Center organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Seed",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for NIC Innovation Research Center.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-nic-rnd"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-nic",
+    "org_type": "government",
+    "name": "National Innovation Center",
+    "description": "National Innovation Center organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Enterprise",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for National Innovation Center.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-nic"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "org-most",
+    "org_type": "government",
+    "name": "Ministry of Science and Technology",
+    "description": "Ministry of Science and Technology organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Technology"
+    ],
+    "stage": "Enterprise",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for Ministry of Science and Technology.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_org-most"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "startup-medvision",
+    "org_type": "startup",
+    "name": "MedVision AI",
+    "description": "MedVision AI organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Artificial Intelligence"
+    ],
+    "stage": "Seed",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for MedVision AI.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_startup-medvision"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "startup-agrisense",
+    "org_type": "startup",
+    "name": "AgriSense",
+    "description": "AgriSense organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Artificial Intelligence"
+    ],
+    "stage": "Seed",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for AgriSense.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_startup-agrisense"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "startup-greengrid",
+    "org_type": "startup",
+    "name": "GreenGrid Energy",
+    "description": "GreenGrid Energy organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Artificial Intelligence"
+    ],
+    "stage": "Seed",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for GreenGrid Energy.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_startup-greengrid"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  },
+  {
+    "organization_id": "startup-finguard",
+    "org_type": "startup",
+    "name": "FinGuard AI",
+    "description": "FinGuard AI organization profile for NIC matchmaking platform.",
+    "country": "Vietnam",
+    "city": "Hanoi",
+    "website": "",
+    "logo_url": "",
+    "industry": [
+      "Artificial Intelligence"
+    ],
+    "stage": "Seed",
+    "employees": 100,
+    "markets": [
+      "Vietnam",
+      "Southeast Asia"
+    ],
+    "technologies": [
+      "Artificial Intelligence",
+      "Cloud Computing",
+      "Data Analytics"
+    ],
+    "capabilities": [
+      "Research Labs",
+      "Datasets"
+    ],
+    "needs": [
+      "Research Partner",
+      "Pilot Customers"
+    ],
+    "offers": [
+      "Research Collaboration",
+      "Mentorship"
+    ],
+    "innovation_priorities": [
+      "AI",
+      "Digital Transformation"
+    ],
+    "collaboration_types": [
+      "Investment",
+      "Pilot Project",
+      "Joint Research"
+    ],
+    "preferred_startup_stage": [
+      "Seed",
+      "Series A"
+    ],
+    "procurement_needs": [
+      "Enterprise AI"
+    ],
+    "pilot_opportunities": [
+      "Government Agencies"
+    ],
+    "research_fields": [
+      "Artificial Intelligence"
+    ],
+    "labs": [
+      "AI Lab"
+    ],
+    "investment": {
+      "investment_stage": [
+        "Seed",
+        "Series A"
+      ],
+      "check_size_usd": {
+        "min": 100000,
+        "max": 1000000
+      },
+      "risk_tolerance": "Medium"
+    },
+    "funding": {
+      "annual_rnd_budget_usd": 10000000,
+      "funding_notes": "Demo dataset"
+    },
+    "strategic_initiatives": [
+      "AI Factory",
+      "Smart City"
+    ],
+    "programs": [
+      {
+        "name": "Innovation Program",
+        "description": "Supports innovation.",
+        "type": "Accelerator"
+      }
+    ],
+    "esg": {
+      "goals": [
+        "Net Zero"
+      ]
+    },
+    "matching": {
+      "preferred_industries": [
+        "AI",
+        "FinTech"
+      ],
+      "preferred_technologies": [
+        "AI",
+        "Computer Vision"
+      ],
+      "preferred_markets": [
+        "Vietnam"
+      ],
+      "preferred_capabilities": [
+        "AI Engineers"
+      ],
+      "preferred_needs": [
+        "Funding"
+      ],
+      "matching_tags": [
+        "AI",
+        "Innovation"
+      ]
+    },
+    "ai_profile": {
+      "summary": "AI-generated profile for FinGuard AI.",
+      "strengths": [
+        "Technology expertise"
+      ],
+      "weaknesses": [
+        "Limited partnerships"
+      ],
+      "opportunities": [
+        "Regional expansion"
+      ],
+      "risks": [
+        "Competition"
+      ],
+      "readiness_score": 90,
+      "capability_vector": {
+        "AI": 0.9,
+        "Cloud": 0.8,
+        "Cybersecurity": 0.6,
+        "Manufacturing": 0.4,
+        "Research": 0.8,
+        "Healthcare": 0.3,
+        "Education": 0.2,
+        "Semiconductors": 0.5
+      },
+      "needs_vector": {
+        "Investment": 0.5,
+        "Research": 0.6,
+        "Manufacturing": 0.3,
+        "Cloud": 0.2,
+        "Distribution": 0.4,
+        "Cybersecurity": 0.5
+      },
+      "embedding_id": "emb_startup-finguard"
+    },
+    "metadata": {
+      "created_at": "2026-07-17T12:00:00Z",
+      "updated_at": "2026-07-17T12:00:00Z",
+      "verified": true,
+      "source": "NIC Dataset"
+    }
+  }
+]

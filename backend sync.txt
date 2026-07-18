@@ -1,0 +1,70 @@
+Backend API & Sync Contract
+This document outlines the API surface and authentication flow required by the frontend soNIC platform to ensure seamless integration with the backend.
+
+1. Auth Flow & JWT (Supabase)
+IMPORTANT
+
+The frontend is ready to drop in Supabase authentication.
+
+Frontend → Backend Flow:
+
+Frontend uses @supabase/supabase-js to log users in.
+Frontend retrieves the active session JWT (supabase.auth.getSession()).
+Frontend attaches this JWT to all API requests in the header: Authorization: Bearer <SUPABASE_JWT>
+Backend verifies the JWT signature using Supabase's JWT secret to identify the user and their role.
+2. Role-Based Routing & 403 Shape
+Each user is assigned a role (startup, partner, nic).
+
+Error Handling: If a startup user attempts to fetch a /api/nic/* route, the backend MUST return a structured 403 Forbidden JSON response so the frontend can intercept it and redirect the user back to their correct dashboard.
+
+Expected 403 Response Shape:
+
+json
+
+{
+  "error": "Forbidden",
+  "message": "You do not have permission to access this resource.",
+  "requiredRole": "nic",
+  "userRole": "startup"
+}
+3. File Upload Flow (Pitch Decks)
+TIP
+
+Decision: Direct-to-Supabase Storage is preferred for scalability.
+
+Flow:
+
+Frontend requests a signed upload URL from the backend (optional) OR uploads directly to a Supabase Storage bucket using the user's authenticated Supabase client.
+Frontend receives the file URL from Supabase Storage.
+Frontend submits the URL to the backend alongside the rest of the profile data (e.g., POST /api/startup/profile with pitchDeckUrl: "https://...").
+4. API Surface & Route List
+The frontend expects the following RESTful endpoints (JSON). All routes require the Authorization header.
+
+Startups (/api/startups)
+GET /api/startups/profile — Fetch current startup's profile
+POST /api/startups/profile — Upsert profile data (Phase 1 form)
+POST /api/startups/profile/analyze — Trigger Phase 2 AI enrichment
+GET /api/startups/matches — List all matches for this startup
+GET /api/startups/matches/:id — Get Match Detail (Explanation, Capability Comparison, Roadmap)
+Partners (/api/partners)
+GET /api/partners/profile — Fetch current partner's profile
+POST /api/partners/profile — Upsert tailored organization profile
+GET /api/partners/matches — List all startup matches for this partner (reversed perspective)
+NIC Staff (/api/nic)
+GET /api/nic/stats — High-level KPI numbers (total applications, success rate)
+GET /api/nic/charts/sectors — Data for PieChart
+GET /api/nic/charts/funding — Data for BarChart and TrendChart
+GET /api/nic/startups — List all startups with filter capabilities
+Shared / Meetings (/api/meetings)
+GET /api/meetings — List scheduled meetings for the current user
+POST /api/meetings — Schedule a new meeting
+5. Development Setup
+WARNING
+
+Please ensure CORS is configured on the backend to accept requests from:
+
+Local: http://localhost:3000
+Production: (TBD, e.g., https://sonic.vn)
+Allowed Methods: GET, POST, PUT, DELETE, OPTIONS Allowed Headers: Content-Type, Authorization
+
+Once the routes are deployed to staging, please provide a Postman Collection or OpenAPI/Swagger spec so I can replace the MOCK_DATA with live fetch() calls.
