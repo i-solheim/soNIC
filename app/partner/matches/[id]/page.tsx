@@ -154,7 +154,9 @@ export default function PartnerMatchDetailPage() {
     setLoading(true);
     setError(false);
 
-    fetch(`/api/explain-match?id=${id}`)
+    fetch(`/api/explain-match?id=${id}`, {
+      headers: { Authorization: `Bearer ${localStorage.getItem("sonic_token")}` }
+    })
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch match details");

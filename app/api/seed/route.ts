@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import bcrypt from "bcryptjs";
 import prisma from "@/lib/prisma";
 import { MOCK_PARTNER_PROFILES, MOCK_STARTUP_PROFILE } from "@/lib/mock-data";
 
@@ -17,12 +18,15 @@ export async function GET() {
     await prisma.organization.deleteMany({});
     await prisma.profile.deleteMany({});
 
+    const hashedPw = await bcrypt.hash("password", 10);
+    const hashedPwPartner = await bcrypt.hash("pw", 10);
+
     // Create a mock startup profile
     const startupProfile = await prisma.profile.create({
       data: {
         id: "mock_startup_user",
         email: "startup@sonic.vn",
-        password: "password", // In reality, hashed
+        password: hashedPw,
         role: "startup",
         name: "Test Startup"
       }
@@ -33,7 +37,7 @@ export async function GET() {
       data: {
         id: "mock_partner_user",
         email: "partner@sonic.vn",
-        password: "password",
+        password: hashedPw,
         role: "partner",
         name: "Test Partner"
       }
@@ -56,7 +60,7 @@ export async function GET() {
         data: {
           id: p.organization_id,
           email: `${p.organization_id}@partner.com`,
-          password: "pw",
+          password: hashedPwPartner,
           role: "partner",
           name: p.name
         }
@@ -90,7 +94,7 @@ export async function GET() {
         data: {
           id: s.id,
           email: `${s.id}@startup.com`,
-          password: "pw",
+          password: hashedPw,
           role: "startup",
           name: s.companyName
         }

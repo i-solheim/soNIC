@@ -20,7 +20,7 @@ export async function getAuthedUser(request: Request): Promise<AuthResult> {
 
   let decoded: any;
   try {
-    decoded = jwt.verify(token, process.env.SUPABASE_JWT_SECRET || "super-secret-jwt-token");
+    decoded = jwt.verify(token, process.env.JWT_SECRET!);
   } catch {
     return { user: null, error: { status: 401, body: { error: "Unauthorized", message: "Invalid or expired token." } } };
   }

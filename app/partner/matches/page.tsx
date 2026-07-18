@@ -42,7 +42,9 @@ export default function PartnerMatchesPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("/api/matches?type=partner")
+    fetch("/api/matches?type=partner", {
+      headers: { Authorization: `Bearer ${localStorage.getItem("sonic_token")}` }
+    })
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) setFeedStartups(data);
@@ -94,8 +96,11 @@ export default function PartnerMatchesPage() {
     try {
       await fetch("/api/matches/like", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ fromUserId: "mock_partner_user", toUserId: id })
+        headers: { 
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${localStorage.getItem("sonic_token")}`
+        },
+        body: JSON.stringify({ toUserId: id }) // fromUserId is no longer needed
       });
     } catch (err) {
       console.error(err);

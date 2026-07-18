@@ -58,89 +58,59 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     email: string,
     password: string
   ): Promise<{ success: boolean; error?: string }> => {
-    // Simulate network delay
-    await new Promise((r) => setTimeout(r, 900));
+    try {
+      const res = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+      const data = await res.json();
 
-    let user: User | undefined;
-    let valid = false;
-
-    // First check custom registered users
-    const customUsersJson = localStorage.getItem("sonic_registered_users");
-    const customCredsJson = localStorage.getItem("sonic_registered_creds");
-    if (customUsersJson && customCredsJson) {
-      const users: User[] = JSON.parse(customUsersJson);
-      const creds = JSON.parse(customCredsJson);
-      if (creds[email.toLowerCase()] && creds[email.toLowerCase()].password === password) {
-        valid = true;
-        user = users.find(u => u.id === creds[email.toLowerCase()].userId);
+      if (!res.ok) {
+        return { success: false, error: data.error || "auth.error.invalid" };
       }
+
+      localStorage.setItem("sonic_token", data.token);
+      localStorage.setItem("sonic_user", JSON.stringify(data.user));
+      document.cookie = `sonic_token=${data.token}; path=/; max-age=86400`;
+      document.cookie = `sonic_role=${data.user.role}; path=/; max-age=86400`;
+
+      setState({ user: data.user, token: data.token, isAuthenticated: true, isLoading: false });
+      return { success: true };
+    } catch {
+      return { success: false, error: "auth.error.network" };
     }
-
-    // Fallback to MOCK_CREDENTIALS
-    if (!valid) {
-      const cred = MOCK_CREDENTIALS[email.toLowerCase()];
-      if (cred && cred.password === password) {
-        valid = true;
-        user = MOCK_USERS.find((u) => u.id === cred.userId);
-      }
-    }
-
-    if (!valid || !user) {
-      return { success: false, error: "auth.error.invalid" };
-    }
-
-    const token = `token_${user.id}_${Date.now()}`;
-    localStorage.setItem("sonic_token", token);
-    localStorage.setItem("sonic_user", JSON.stringify(user));
-    document.cookie = `sonic_token=${token}; path=/; max-age=86400`;
-    document.cookie = `sonic_role=${user.role}; path=/; max-age=86400`;
-
-    setState({ user, token, isAuthenticated: true, isLoading: false });
-    return { success: true };
   };
 
   const register = async (data: any): Promise<{ success: boolean; error?: string }> => {
-    await new Promise((r) => setTimeout(r, 900));
+    try {
+      const res = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ 
+          email: data.email, 
+          password: data.password, 
+          name: data.name, 
+          role: data.role, 
+          orgType: data.orgType 
+        }),
+      });
+      const result = await res.json();
 
-    const email = data.email.toLowerCase();
-    
-    // Check if exists in mock
-    if (MOCK_CREDENTIALS[email]) {
-      return { success: false, error: 'Email already registered' };
+      if (!res.ok) {
+        return { success: false, error: result.error || "auth.error.network" };
+      }
+
+      localStorage.setItem("sonic_token", result.token);
+      localStorage.setItem("sonic_user", JSON.stringify(result.user));
+      document.cookie = `sonic_token=${result.token}; path=/; max-age=86400`;
+      document.cookie = `sonic_role=${result.user.role}; path=/; max-age=86400`;
+
+      setState({ user: result.user, token: result.token, isAuthenticated: true, isLoading: false });
+      return { success: true };
+    } catch {
+      return { success: false, error: "auth.error.network" };
     }
-
-    const customUsersJson = localStorage.getItem("sonic_registered_users");
-    const customCredsJson = localStorage.getItem("sonic_registered_creds");
-    const customUsers: User[] = customUsersJson ? JSON.parse(customUsersJson) : [];
-    const customCreds = customCredsJson ? JSON.parse(customCredsJson) : {};
-
-    if (customCreds[email]) {
-      return { success: false, error: 'Email already registered' };
-    }
-
-    const newUser: User = {
-      id: `reg_${Date.now()}`,
-      email,
-      name: data.name,
-      role: data.role,
-      orgType: data.orgType,
-      createdAt: new Date().toISOString()
-    };
-
-    customUsers.push(newUser);
-    customCreds[email] = { password: data.password, userId: newUser.id };
-
-    localStorage.setItem("sonic_registered_users", JSON.stringify(customUsers));
-    localStorage.setItem("sonic_registered_creds", JSON.stringify(customCreds));
-
-    const token = `token_${newUser.id}_${Date.now()}`;
-    localStorage.setItem("sonic_token", token);
-    localStorage.setItem("sonic_user", JSON.stringify(newUser));
-    document.cookie = `sonic_token=${token}; path=/; max-age=86400`;
-    document.cookie = `sonic_role=${newUser.role}; path=/; max-age=86400`;
-
-    setState({ user: newUser, token, isAuthenticated: true, isLoading: false });
-    return { success: true };
   };
 
   const logout = () => {
