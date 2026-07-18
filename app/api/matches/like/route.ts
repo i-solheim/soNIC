@@ -8,41 +8,53 @@ export async function POST(request: Request) {
 
   try {
     const { toUserId } = await request.json();
-    const fromUserId = user!.id; // Override with securely authenticated user
-
-    if (!fromUserId || !toUserId) {
-      return NextResponse.json({ error: "Missing fromUserId or toUserId" }, { status: 400 });
+    if (!toUserId) {
+      return NextResponse.json({ error: "Missing toUserId" }, { status: 400 });
     }
 
-    // Try to find the startup and organization from the given user IDs
-    let startupId = null;
-    let organizationId = null;
+    let startupId: string | null = null;
+    let organizationId: string | null = null;
 
-    const startup1 = await prisma.startup.findUnique({ where: { userId: fromUserId } });
-    if (startup1) startupId = startup1.id;
-    const startup2 = await prisma.startup.findUnique({ where: { userId: toUserId } });
-    if (startup2) startupId = startup2.id;
+    if (user!.role === "startup") {
+      const myStartup = await prisma.startup.findUnique({ where: { userId: user!.id } });
+      if (!myStartup) {
+        return NextResponse.json({ error: "No startup profile found for current user" }, { status: 400 });
+      }
+      startupId = myStartup.id;
 
-    const org1 = await prisma.organization.findUnique({ where: { userId: fromUserId } });
-    if (org1) organizationId = org1.id;
-    const org2 = await prisma.organization.findUnique({ where: { userId: toUserId } });
-    if (org2) organizationId = org2.id;
+      // toUserId is the Organization's own primary key, as returned by /api/matches?type=startup
+      const org = await prisma.organization.findUnique({ where: { id: toUserId } });
+      if (!org) {
+        return NextResponse.json({ error: "Organization not found" }, { status: 404 });
+      }
+      organizationId = org.id;
+    } else if (user!.role === "partner") {
+      const myOrg = await prisma.organization.findUnique({ where: { userId: user!.id } });
+      if (!myOrg) {
+        return NextResponse.json({ error: "No organization profile found for current user" }, { status: 400 });
+      }
+      organizationId = myOrg.id;
 
-    if (!startupId || !organizationId) {
-      return NextResponse.json({ error: "Could not resolve Startup and Organization from given User IDs" }, { status: 400 });
+      // toUserId is the Startup's own primary key, as returned by /api/matches?type=partner
+      const startup = await prisma.startup.findUnique({ where: { id: toUserId } });
+      if (!startup) {
+        return NextResponse.json({ error: "Startup not found" }, { status: 404 });
+      }
+      startupId = startup.id;
+    } else {
+      return NextResponse.json(
+        { error: "Forbidden", message: "Only startup or partner roles can like a match." },
+        { status: 403 }
+      );
     }
 
     const match = await prisma.match.create({
-      data: {
-        startupId,
-        organizationId,
-        status: "pending"
-      }
+      data: { startupId, organizationId, status: "pending" },
     });
 
     return NextResponse.json(match);
   } catch (error: any) {
-    if (error.code === 'P2002') {
+    if (error.code === "P2002") {
       return NextResponse.json({ error: "Match already exists" }, { status: 400 });
     }
     return NextResponse.json({ error: error.message }, { status: 500 });
