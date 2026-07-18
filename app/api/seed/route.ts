@@ -41,6 +41,14 @@ export async function GET(request: Request) {
         name: "Test Startup"
       }
     });
+    await prisma.startup.create({
+      data: {
+        id: "mock_startup_user",
+        userId: startupProfile.id,
+        name: "Test Startup",
+        stage: "seed"
+      }
+    });
 
     // Create a mock partner profile
     const partnerProfile = await prisma.profile.create({
@@ -50,6 +58,25 @@ export async function GET(request: Request) {
         password: hashedPw,
         role: "partner",
         name: "Test Partner"
+      }
+    });
+    await prisma.organization.create({
+      data: {
+        id: "mock_partner_user",
+        userId: partnerProfile.id,
+        orgType: "corporation",
+        name: "Test Partner"
+      }
+    });
+
+    // Create a mock NIC profile
+    const nicProfile = await prisma.profile.create({
+      data: {
+        id: "mock_nic_user",
+        email: "nic@sonic.vn",
+        password: hashedPw,
+        role: "nic",
+        name: "Test NIC Staff"
       }
     });
 
