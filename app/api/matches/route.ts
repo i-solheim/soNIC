@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
 import { getAuthedUser, checkRole } from "@/lib/auth-server";
-import { matchStartupWithOrgs } from "@/lib/agents/match";
+import { matchStartupWithOrgs, matchOrgWithStartups } from "@/lib/agents/match";
 
 export async function GET(request: Request) {
   const { user, error } = await getAuthedUser(request);
@@ -15,35 +15,114 @@ export async function GET(request: Request) {
       const roleError = checkRole(user!.role, "partner", "nic");
       if (roleError) return NextResponse.json(roleError.body, { status: roleError.status });
 
-      // Return startups for a partner to view
-      const startups = await prisma.startup.findMany();
-      // Format them
-      const formatted = startups.map(s => {
-        let tech = [];
-        try { tech = JSON.parse(s.technology); } catch(e){}
-        let growth = {} as any;
-        try { growth = JSON.parse(s.growth); } catch(e){}
+      // Find the authenticated user's own Organization record
+      const myOrg = await prisma.organization.findUnique({ where: { userId: user!.id } });
+      if (!myOrg) {
+        return NextResponse.json(
+          { error: "No organization profile found. Complete your profile first." },
+          { status: 400 }
+        );
+      }
 
-        return {
-          id: s.id,
-          name: s.name,
-          logo: s.name ? s.name.charAt(0) : "S",
-          sector: s.industry || "Tech",
-          tagline: s.problem || "",
-          description: s.solution || "",
-          users: growth?.users || "0",
-          budget: s.fundingNeed ? `$${s.fundingNeed}` : "$0",
-          stage: s.stage || "seed",
-          keywords: tech,
-          breakdown: { tech: 80, market: 85, funding: 90 }, // Mock
-          why: s.problem || "",
-          plan: ["Expand to new markets", "Develop version 2.0"],
-          slides: ["Problem", "Solution", "Market", "Traction"],
-          video: { title: "Demo Video", dur: "2:30" },
-          score: s.readinessScore || 80
-        };
-      });
-      return NextResponse.json(formatted);
+      // Get all candidate startups
+      const allStartups = await prisma.startup.findMany();
+      if (allStartups.length === 0) {
+        return NextResponse.json([]);
+      }
+
+      // Build lightweight snapshot of the organization
+      const myAttrs = safeParseJson(myOrg.attrs, {});
+      const orgSnapshot = {
+        id: myOrg.id,
+        name: myOrg.name,
+        orgType: myOrg.orgType,
+        industry: myOrg.industry,
+        country: myOrg.country,
+        preferredStartupStage: myOrg.preferredStartupStage,
+        innovationPriorities: myAttrs.innovationPriorities || [],
+        technologyInterests: myAttrs.technologyInterests || [],
+        investmentStages: myAttrs.investmentStages || [],
+        researchFields: myAttrs.researchFields || [],
+        industries: myAttrs.industries || [],
+      };
+
+      // Build lightweight snapshots of all startups
+      const startupSnapshots = allStartups.map((s) => ({
+        startupId: s.id,
+        name: s.name,
+        industry: s.industry,
+        stage: s.stage,
+        technologies: safeParseJson(s.technology, []),
+        goals: safeParseJson(s.goals, []),
+        capabilities: safeParseJson(s.capabilities, []),
+        fundingNeed: s.fundingNeed,
+        customerTypes: safeParseJson(s.customerType, []),
+        targetMarkets: safeParseJson(s.market, []),
+      }));
+
+      // Call Agent 3b
+      const aiMatches = await matchOrgWithStartups(orgSnapshot, startupSnapshots);
+
+      // Build enriched response and persist match scores to DB
+      const results = await Promise.all(
+        aiMatches.map(async (m) => {
+          const startup = allStartups.find((s) => s.id === m.startupId);
+          if (!startup) return null;
+
+          const growth = safeParseJson(startup.growth, {});
+          const tech = safeParseJson(startup.technology, []);
+
+          // Upsert the Match row with AI score
+          try {
+            await prisma.match.upsert({
+              where: {
+                startupId_organizationId: {
+                  startupId: startup.id,
+                  organizationId: myOrg.id,
+                },
+              },
+              create: {
+                startupId: startup.id,
+                organizationId: myOrg.id,
+                score: Math.round(m.score),
+                collaborationType: m.collabTypes[0] || null,
+                shortReason: m.shortReason,
+                status: "pending",
+              },
+              update: {
+                score: Math.round(m.score),
+                collaborationType: m.collabTypes[0] || null,
+                shortReason: m.shortReason,
+              },
+            });
+          } catch {
+            // Non-fatal — match row may have a unique constraint violation in edge cases
+          }
+
+          return {
+            id: startup.id,
+            name: startup.name,
+            logo: startup.name ? startup.name.charAt(0) : "S",
+            sector: startup.industry || "Tech",
+            tagline: startup.tagline || startup.problem || "",
+            description: startup.solution || "",
+            users: growth?.users || "0",
+            budget: startup.fundingNeed ? `$${startup.fundingNeed}` : "$0",
+            stage: startup.stage || "seed",
+            keywords: tech,
+            why: startup.problem || "",
+            plan: ["Expand to new markets", "Develop version 2.0"],
+            slides: ["Problem", "Solution", "Market", "Traction"],
+            video: { title: "Demo Video", dur: "2:30" },
+            score: startup.readinessScore || 80,
+            matchScore: m.score,
+            collabTypes: m.collabTypes,
+            shortReason: m.shortReason,
+          };
+        })
+      );
+
+      return NextResponse.json(results.filter(Boolean));
     } else if (type === "startup") {
       const roleError = checkRole(user!.role, "startup", "nic");
       if (roleError) return NextResponse.json(roleError.body, { status: roleError.status });

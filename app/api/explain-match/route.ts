@@ -43,20 +43,16 @@ export async function GET(request: NextRequest) {
 
   // If the explanation is already cached in the DB, return it immediately
   if (match.explanation) {
-    const capabilityComparison = safeParseJson(match.breakdown, null);
-    const roadmap = safeParseJson(match.risks, null); // risks field reused for roadmap JSON below
-    const savedRoadmap = (match as any).roadmap ? safeParseJson((match as any).roadmap, null) : null;
-
     return NextResponse.json({
       match,
       explanation: match.explanation,
-      explanationVi: (match as any).explanationVi || match.explanation,
+      explanationVi: match.explanationVi || match.explanation,
       suggestedCollaboration: match.suggestedCollaboration,
       risks: safeParseJson(match.risks, []),
       expectedRoi: match.expectedRoi,
       nextBestAction: match.nextBestAction,
-      capabilityComparison: capabilityComparison || FALLBACK_COMPARISON,
-      roadmap: savedRoadmap || FALLBACK_ROADMAP,
+      capabilityComparison: safeParseJson(match.capabilityComparison, null) || FALLBACK_COMPARISON,
+      roadmap: safeParseJson(match.roadmap, null) || FALLBACK_ROADMAP,
     });
   }
 
@@ -94,16 +90,13 @@ export async function GET(request: NextRequest) {
     where: { id },
     data: {
       explanation: result.explanation,
+      explanationVi: result.explanationVi,
       suggestedCollaboration: result.suggestedCollaboration,
       risks: JSON.stringify(result.risks),
       expectedRoi: result.expectedRoi,
       nextBestAction: result.nextBestAction,
-      // Store full enriched data in breakdown field as JSON
-      breakdown: JSON.stringify({
-        explanationVi: result.explanationVi,
-        capabilityComparison: result.capabilityComparison,
-        roadmap: result.roadmap,
-      }),
+      capabilityComparison: JSON.stringify(result.capabilityComparison),
+      roadmap: JSON.stringify(result.roadmap),
     },
   });
 

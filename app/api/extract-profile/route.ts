@@ -74,10 +74,12 @@ export async function POST(request: Request) {
     where: { userId: user!.id },
     data: {
       name: profile.name,
+      tagline: profile.tagline ?? undefined,
       industry: profile.industry,
       location: profile.location ?? undefined,
       stage: profile.stage,
       employees: profile.employees ?? undefined,
+      foundedYear: profile.foundedYear ?? undefined,
       technology: JSON.stringify(profile.technologies),
       problem: profile.problemStatement,
       solution: profile.solution,
@@ -92,7 +94,8 @@ export async function POST(request: Request) {
       }),
       goals: JSON.stringify(profile.goals),
       capabilities: JSON.stringify(profile.capabilities),
-      recommendation: profile.aiSummary,
+      aiSummary: profile.aiSummary,
+      aiKeywords: JSON.stringify(profile.aiKeywords),
       rawProfile: JSON.stringify(profile),
     },
   });

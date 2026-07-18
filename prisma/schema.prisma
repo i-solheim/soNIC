@@ -33,6 +33,8 @@ model Startup {
   location      String?
   stage         String?  // "bootstrapped" | "seed" | "series_a" | "series_b_plus"
   employees     Int?
+  tagline       String?
+  foundedYear   Int?
   technology    String   @default("[]") // JSON string array
   problem       String?
   solution      String?
@@ -43,6 +45,8 @@ model Startup {
   growth        String   @default("{}") // JSON string
   goals         String   @default("[]") // JSON string array
   capabilities  String   @default("[]") // JSON stringified array of strings
+  aiSummary     String?  // Agent 1's executive summary
+  aiKeywords    String   @default("[]") // JSON string array
 
   // AssessReadinessResponse fields
   readinessScore        Int?
@@ -117,10 +121,13 @@ model Match {
 
   // ExplainMatchResponse fields
   explanation            String?
+  explanationVi          String?
   suggestedCollaboration String?
   risks                  String   @default("[]") // JSON string array
   expectedRoi            String?  // "low" | "medium" | "high"
   nextBestAction         String?
+  capabilityComparison   String?  // JSON string: { startupHas, startupHasVi, orgNeeds, orgNeedsVi }
+  roadmap                String   @default("[]") // JSON string array of RoadmapStep
 
   status    String   @default("pending") // "pending" | "reviewed" | "approved" | "rejected"
   createdAt DateTime @default(now())
