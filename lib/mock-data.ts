@@ -44,13 +44,6 @@ export const MOCK_USERS: User[] = [
   },
 ];
 
-// Mock credentials for login
-export const MOCK_CREDENTIALS: Record<string, { password: string; userId: string }> = {
-  "startup@sonic.vn": { password: "startup123", userId: "u1" },
-  "corp@sonic.vn": { password: "partner123", userId: "u2" },
-  "vc@sonic.vn": { password: "partner123", userId: "u3" },
-  "nic@sonic.vn": { password: "nic123", userId: "u4" },
-};
 
 // ============================================================
 // Mock Startup Profile

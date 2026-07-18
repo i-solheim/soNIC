@@ -7,8 +7,8 @@ interface AuthResult {
 }
 
 /**
- * Verifies the Supabase-issued JWT sent as `Authorization: Bearer <token>`.
- * Call this at the top of every route handler that needs auth.
+ * Verifies the backend-issued JWT sent as `Authorization: Bearer <token>`.
+ * Returns the parsed payload if valid.
  */
 export async function getAuthedUser(request: Request): Promise<AuthResult> {
   const authHeader = request.headers.get("authorization") || "";

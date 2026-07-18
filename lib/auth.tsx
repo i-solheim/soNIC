@@ -3,7 +3,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { User, AuthState, UserRole } from "./types";
-import { MOCK_USERS, MOCK_CREDENTIALS } from "./mock-data";
 
 // ============================================================
 // Auth Context

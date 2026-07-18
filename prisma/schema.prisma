@@ -38,11 +38,11 @@ model Startup {
   solution      String?
   customerType  String   @default("[]") // JSON string array
   market        String   @default("[]") // JSON string array
-  businessModel String?
+  businessModel String?  // JSON stringified array of BusinessModel strings (e.g. ["saas", "marketplace"])
   fundingNeed   Float?
   growth        String   @default("{}") // JSON string
   goals         String   @default("[]") // JSON string array
-  capabilities  String   @default("{}") // JSON string
+  capabilities  String   @default("[]") // JSON stringified array of strings
 
   // AssessReadinessResponse fields
   readinessScore        Int?

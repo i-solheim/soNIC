@@ -2,10 +2,20 @@ import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import prisma from "@/lib/prisma";
 import { MOCK_PARTNER_PROFILES, MOCK_STARTUP_PROFILE } from "@/lib/mock-data";
+import { getAuthedUser, checkRole } from "@/lib/auth-server";
 
-export async function GET() {
+export async function GET(request: Request) {
   if (process.env.NODE_ENV === "production") {
     return NextResponse.json({ error: "Forbidden in production" }, { status: 403 });
+  }
+
+  const seedKey = request.headers.get("x-seed-key");
+  if (!seedKey || seedKey !== process.env.SEED_SECRET) {
+    const { user, error } = await getAuthedUser(request);
+    if (error) return NextResponse.json(error.body, { status: error.status });
+
+    const roleError = checkRole(user!.role, "nic");
+    if (roleError) return NextResponse.json(roleError.body, { status: roleError.status });
   }
 
   try {
