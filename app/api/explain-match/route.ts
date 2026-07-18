@@ -1,10 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
+import prisma from "@/lib/prisma";
+import { getAuthedUser } from "@/lib/auth-server";
 import {
-  MOCK_MATCHES,
   MOCK_CAPABILITY_COMPARISON,
   MOCK_ROADMAP,
-  MOCK_STARTUP_PROFILE,
-  MOCK_PARTNER_PROFILES,
 } from "@/lib/mock-data";
 
 const FALLBACK_COMPARISON = {
@@ -32,6 +31,9 @@ const FALLBACK_ROADMAP = [
 ];
 
 export async function GET(request: NextRequest) {
+  const { user, error } = await getAuthedUser(request);
+  if (error) return NextResponse.json(error.body, { status: error.status });
+
   const { searchParams } = new URL(request.url);
   const id = searchParams.get("id");
 
@@ -39,24 +41,32 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error: "Missing match ID" }, { status: 400 });
   }
 
-  const match = MOCK_MATCHES.find((m) => m.id === id);
+  const match = await prisma.match.findUnique({
+    where: { id },
+    include: { startup: true, organization: true },
+  });
 
   if (!match) {
     return NextResponse.json({ error: "Match not found" }, { status: 404 });
   }
 
-  // Populate startup and partner info
-  const populatedMatch = {
-    ...match,
-    startup: match.startup || (match.startupId === MOCK_STARTUP_PROFILE.id ? MOCK_STARTUP_PROFILE : undefined),
-    partner: match.partner || MOCK_PARTNER_PROFILES.find((p) => p.id === match.partnerId),
-  };
+  // Check auth authorization: only the startup or the organization involved (or nic) can see the explanation
+  if (
+    user!.role !== "nic" &&
+    match.startup.userId !== user!.id &&
+    match.organization.userId !== user!.id
+  ) {
+    return NextResponse.json(
+      { error: "Forbidden", message: "You do not have permission to view this match." },
+      { status: 403 }
+    );
+  }
 
   const capabilityComparison = (MOCK_CAPABILITY_COMPARISON as any)[id] || FALLBACK_COMPARISON;
   const roadmap = (MOCK_ROADMAP as any)[id] || FALLBACK_ROADMAP;
 
   return NextResponse.json({
-    match: populatedMatch,
+    match,
     capabilityComparison,
     roadmap,
   });

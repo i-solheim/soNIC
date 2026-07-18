@@ -3,6 +3,10 @@ import prisma from "@/lib/prisma";
 import { MOCK_PARTNER_PROFILES, MOCK_STARTUP_PROFILE } from "@/lib/mock-data";
 
 export async function GET() {
+  if (process.env.NODE_ENV === "production") {
+    return NextResponse.json({ error: "Forbidden in production" }, { status: 403 });
+  }
+
   try {
     // Clear existing data
     await prisma.email.deleteMany({});

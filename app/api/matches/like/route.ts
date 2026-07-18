@@ -1,9 +1,14 @@
 import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
+import { getAuthedUser } from "@/lib/auth-server";
 
 export async function POST(request: Request) {
+  const { user, error } = await getAuthedUser(request);
+  if (error) return NextResponse.json(error.body, { status: error.status });
+
   try {
-    const { fromUserId, toUserId } = await request.json();
+    const { toUserId } = await request.json();
+    const fromUserId = user!.id; // Override with securely authenticated user
 
     if (!fromUserId || !toUserId) {
       return NextResponse.json({ error: "Missing fromUserId or toUserId" }, { status: 400 });

@@ -1,12 +1,19 @@
 import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
+import { getAuthedUser, checkRole } from "@/lib/auth-server";
 
 export async function GET(request: Request) {
+  const { user, error } = await getAuthedUser(request);
+  if (error) return NextResponse.json(error.body, { status: error.status });
+
   const { searchParams } = new URL(request.url);
   const type = searchParams.get("type"); // "partner" or "startup"
 
   try {
     if (type === "partner") {
+      const roleError = checkRole(user!.role, "partner", "nic");
+      if (roleError) return NextResponse.json(roleError.body, { status: roleError.status });
+
       // Return startups for a partner to view
       const startups = await prisma.startup.findMany();
       // Format them
@@ -37,6 +44,9 @@ export async function GET(request: Request) {
       });
       return NextResponse.json(formatted);
     } else if (type === "startup") {
+      const roleError = checkRole(user!.role, "startup", "nic");
+      if (roleError) return NextResponse.json(roleError.body, { status: roleError.status });
+
       // Return partners for a startup to view
       const partners = await prisma.organization.findMany();
       const formatted = partners.map(p => {
