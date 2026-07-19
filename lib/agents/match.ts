@@ -30,7 +30,7 @@ Scoring factors:
 
 Rules:
 - Sort the array by score descending
-- Only include organizations with score >= 80
+- Only include organizations with score >= 40
 - Be specific in shortReason — mention actual industry/technology alignment
 - collabTypes should reflect the most natural collaboration mode for this pair
 - CRITICAL: Do NOT use double quotes (") inside shortReason. Use single quotes (') instead if needed to avoid breaking JSON.`;
@@ -85,7 +85,7 @@ stage match (20%), geographic overlap (15%), goal alignment (10%).
 
 Rules:
 - Sort the array by score descending
-- Only include startups with score >= 80
+- Only include startups with score >= 40
 - Be specific in shortReason
 - CRITICAL: Do NOT use double quotes (") inside shortReason. Use single quotes (') instead if needed to avoid breaking JSON.`;
 

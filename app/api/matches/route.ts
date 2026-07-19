@@ -61,8 +61,10 @@ export async function GET(request: Request) {
               shortReason: m.shortReason,
             };
           });
-          // Only return matches above the 80 threshold if returning from DB
-          return NextResponse.json(results.filter(Boolean).filter(r => (r?.matchScore || 0) >= 80));
+          // Only return matches above the 40 threshold and limit to 7
+          return NextResponse.json(
+            results.filter(Boolean).filter(r => (r?.matchScore || 0) >= 40).slice(0, 7)
+          );
         }
       }
 
@@ -164,7 +166,9 @@ export async function GET(request: Request) {
         })
       );
 
-      return NextResponse.json(results.filter(Boolean));
+      return NextResponse.json(
+        results.filter(Boolean).filter(r => (r?.matchScore || 0) >= 40).slice(0, 7)
+      );
     } else if (type === "startup") {
       const roleError = checkRole(user!.role, "startup", "nic");
       if (roleError) return NextResponse.json(roleError.body, { status: roleError.status });
@@ -211,8 +215,10 @@ export async function GET(request: Request) {
               shortReason: m.shortReason,
             };
           });
-          // Only return matches above the 80 threshold if returning from DB
-          return NextResponse.json(results.filter(Boolean).filter(r => (r?.matchScore || 0) >= 80));
+          // Only return matches above the 40 threshold and limit to 7
+          return NextResponse.json(
+            results.filter(Boolean).filter(r => (r?.matchScore || 0) >= 40).slice(0, 7)
+          );
         }
       }
 
@@ -312,7 +318,9 @@ export async function GET(request: Request) {
         })
       );
 
-      return NextResponse.json(results.filter(Boolean));
+      return NextResponse.json(
+        results.filter(Boolean).filter(r => (r?.matchScore || 0) >= 40).slice(0, 7)
+      );
     }
 
     return NextResponse.json({ error: "Invalid type" }, { status: 400 });
