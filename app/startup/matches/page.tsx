@@ -43,7 +43,7 @@ const PANE_NAMES = ['Overview', 'Strategic Fit', 'Focus Areas', 'Intro Video'];
 
 export default function StartupMatchesPage() {
   const router = useRouter();
-  const { addLike, isMutualMatch, likedIds } = useProfileStore();
+  const { addLike, removeLike, isMutualMatch, likedIds } = useProfileStore();
 
   const [feedPartners, setFeedPartners] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -94,26 +94,33 @@ export default function StartupMatchesPage() {
   }, [modalPartnerIdx, showMatchAnimation, goNext, goPrev]);
 
   const toggleInterest = async (id: string, e?: React.MouseEvent) => {
-    addLike(id);
-    if (e) {
-      setHearts(prev => [...prev, { id: Date.now(), x: e.clientX, y: e.clientY }]);
-    }
+    const isInterested = likedIds.includes(id);
 
-    try {
-      await fetch("/api/matches/like", {
-        method: "POST",
-        headers: { 
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("sonic_token")}`
-        },
-        body: JSON.stringify({ toUserId: id }) // fromUserId is no longer needed
-      });
-    } catch (err) {
-      console.error(err);
-    }
+    if (isInterested) {
+      removeLike(id);
+      // For a real app, we'd also call a DELETE endpoint here. 
+    } else {
+      addLike(id);
+      if (e) {
+        setHearts(prev => [...prev, { id: Date.now(), x: e.clientX, y: e.clientY }]);
+      }
 
-    if (isMutualMatch(id)) {
-      setTimeout(() => setShowMatchAnimation(true), 800);
+      try {
+        await fetch("/api/matches/like", {
+          method: "POST",
+          headers: { 
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("sonic_token")}`
+          },
+          body: JSON.stringify({ toUserId: id })
+        });
+      } catch (err) {
+        console.error(err);
+      }
+
+      if (isMutualMatch(id)) {
+        setTimeout(() => setShowMatchAnimation(true), 800);
+      }
     }
   };
 
@@ -418,10 +425,15 @@ export default function StartupMatchesPage() {
                 <div className="mt-auto border-t border-slate-200 dark:border-slate-800 pt-6 pb-8 px-12 flex justify-center bg-white dark:bg-[#0f172a] shrink-0">
                   <button 
                     onClick={(e) => toggleInterest(activePartner.id, e as any)}
-                    className="bg-[var(--color-primary)] text-white px-10 py-4 rounded-full font-bold text-lg shadow-[0_0_30px_var(--color-primary)] hover:scale-105 transition-transform flex items-center gap-3"
+                    className={cn(
+                      "px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform flex items-center gap-3",
+                      likedIds.includes(activePartner.id)
+                        ? "bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200"
+                        : "bg-[var(--color-primary)] text-white shadow-[0_0_30px_var(--color-primary)]"
+                    )}
                   >
-                    <Heart className="w-6 h-6 fill-current" />
-                    Express Interest
+                    <Heart className={cn("w-6 h-6", likedIds.includes(activePartner.id) ? "fill-[#35A17E] text-[#35A17E]" : "fill-current")} />
+                    {likedIds.includes(activePartner.id) ? "Interested (Undo)" : "Express Interest"}
                   </button>
                 </div>
               </div>
