@@ -32,7 +32,8 @@ Rules:
 - Sort the array by score descending
 - Only include organizations with score >= 40
 - Be specific in shortReason — mention actual industry/technology alignment
-- collabTypes should reflect the most natural collaboration mode for this pair`;
+- collabTypes should reflect the most natural collaboration mode for this pair
+- CRITICAL: Do NOT use double quotes (") inside shortReason. Use single quotes (') instead if needed to avoid breaking JSON.`;
 
 const MatchItemSchema = z.object({
   organizationId: z.string(),
@@ -53,7 +54,7 @@ export async function matchStartupWithOrgs(
 
   const raw = await callAIJson<MatchItem[]>(SYSTEM_PROMPT, userPrompt, {
     temperature: 0,
-    maxTokens: 2048,
+    maxTokens: 8192,
   });
 
   const result = z.array(MatchItemSchema).parse(raw);
@@ -85,7 +86,8 @@ stage match (20%), geographic overlap (15%), goal alignment (10%).
 Rules:
 - Sort the array by score descending
 - Only include startups with score >= 40
-- Be specific in shortReason`;
+- Be specific in shortReason
+- CRITICAL: Do NOT use double quotes (") inside shortReason. Use single quotes (') instead if needed to avoid breaking JSON.`;
 
 const OrgMatchItemSchema = z.object({
   startupId: z.string(),
@@ -106,7 +108,7 @@ export async function matchOrgWithStartups(
 
   const raw = await callAIJson<OrgMatchItem[]>(ORG_SYSTEM_PROMPT, userPrompt, {
     temperature: 0,
-    maxTokens: 2048,
+    maxTokens: 8192,
   });
 
   const result = z.array(OrgMatchItemSchema).parse(raw);
