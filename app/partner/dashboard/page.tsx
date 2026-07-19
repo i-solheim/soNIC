@@ -178,30 +178,7 @@ export default function PartnerDashboardPage() {
       }
     >
       <div className="space-y-8">
-        {/* Profile completion prompt */}
-        {isProfileDraft && !loading && (
-          <motion.div
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="flex items-start gap-4 p-5 rounded-2xl border-2"
-            style={{
-              background: "var(--color-warning-light)",
-              borderColor: "var(--color-warning)",
-            }}
-          >
-            <AlertTriangle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: "var(--color-warning)" }} />
-            <div className="flex-1">
-              <p className="font-semibold text-foreground text-sm">Complete your organization profile</p>
-              <p className="text-sm mt-0.5" style={{ color: "var(--color-text-muted)" }}>
-                A complete profile unlocks AI-powered matching and increases your chances of finding the right startup partners.
-              </p>
-            </div>
-            <Link href="/partner/profile" className="btn-outline text-sm py-2 px-4 whitespace-nowrap flex-shrink-0">
-              Complete Profile
-            </Link>
-          </motion.div>
-        )}
+
 
 
         {/* Stat cards */}

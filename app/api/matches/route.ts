@@ -9,6 +9,7 @@ export async function GET(request: Request) {
 
   const { searchParams } = new URL(request.url);
   const type = searchParams.get("type"); // "partner" or "startup"
+  const refresh = searchParams.get("refresh") === "true";
 
   try {
     if (type === "partner") {
@@ -22,6 +23,49 @@ export async function GET(request: Request) {
           { error: "No organization profile found. Complete your profile first." },
           { status: 400 }
         );
+      }
+
+      // If not forcing a refresh, check if we have cached matches
+      if (!refresh) {
+        const existingMatches = await prisma.match.findMany({
+          where: { organizationId: myOrg.id },
+          include: { startup: true },
+          orderBy: { score: "desc" },
+        });
+
+        if (existingMatches.length > 0) {
+          const results = existingMatches.map((m) => {
+            const startup = m.startup;
+            if (!startup) return null;
+            const growth = safeParseJson(startup.growth, {});
+            const tech = safeParseJson(startup.technology, []);
+
+            return {
+              id: startup.id,
+              name: startup.name,
+              logo: startup.name ? startup.name.charAt(0) : "S",
+              sector: startup.industry || "Tech",
+              tagline: startup.tagline || startup.problem || "",
+              description: startup.solution || "",
+              users: growth?.users || "0",
+              budget: startup.fundingNeed ? `$${startup.fundingNeed}` : "$0",
+              stage: startup.stage || "seed",
+              keywords: tech,
+              why: startup.problem || "",
+              plan: ["Expand to new markets", "Develop version 2.0"],
+              slides: ["Problem", "Solution", "Market", "Traction"],
+              video: { title: "Demo Video", dur: "2:30" },
+              score: startup.readinessScore || 80,
+              matchScore: m.score,
+              collabTypes: m.collaborationType ? [m.collaborationType] : [],
+              shortReason: m.shortReason,
+            };
+          });
+          // Only return matches above the 40 threshold and limit to 7
+          return NextResponse.json(
+            results.filter(Boolean).filter(r => (r?.matchScore || 0) >= 40).slice(0, 7)
+          );
+        }
       }
 
       // Get all candidate startups
@@ -122,7 +166,9 @@ export async function GET(request: Request) {
         })
       );
 
-      return NextResponse.json(results.filter(Boolean));
+      return NextResponse.json(
+        results.filter(Boolean).filter(r => (r?.matchScore || 0) >= 40).slice(0, 7)
+      );
     } else if (type === "startup") {
       const roleError = checkRole(user!.role, "startup", "nic");
       if (roleError) return NextResponse.json(roleError.body, { status: roleError.status });
@@ -134,6 +180,46 @@ export async function GET(request: Request) {
           { error: "No startup profile found. Complete your profile first." },
           { status: 400 }
         );
+      }
+
+      // If not forcing a refresh, check if we have cached matches
+      if (!refresh) {
+        const existingMatches = await prisma.match.findMany({
+          where: { startupId: myStartup.id },
+          include: { organization: true },
+          orderBy: { score: "desc" },
+        });
+
+        if (existingMatches.length > 0) {
+          const results = existingMatches.map((m) => {
+            const org = m.organization;
+            if (!org) return null;
+            const attrs = safeParseJson(org.attrs, {});
+
+            return {
+              id: org.id,
+              orgName: org.name,
+              orgType: org.orgType,
+              description: attrs.description || org.industry,
+              investmentRange: attrs.investmentRange,
+              budget: org.budget ? `$${org.budget}` : null,
+              matchScore: m.score,
+              location: { city: "N/A", country: org.country },
+              preferredStartupStage: org.preferredStartupStage ? [org.preferredStartupStage] : [],
+              investmentStages: attrs.investmentStages || [],
+              innovationPriorities: attrs.innovationPriorities || [],
+              researchFields: attrs.researchFields || [],
+              industries: attrs.industries || [],
+              technologyInterests: attrs.technologyInterests || [],
+              collabTypes: m.collaborationType ? [m.collaborationType] : [],
+              shortReason: m.shortReason,
+            };
+          });
+          // Only return matches above the 40 threshold and limit to 7
+          return NextResponse.json(
+            results.filter(Boolean).filter(r => (r?.matchScore || 0) >= 40).slice(0, 7)
+          );
+        }
       }
 
       // Get all partner organizations
@@ -232,7 +318,9 @@ export async function GET(request: Request) {
         })
       );
 
-      return NextResponse.json(results.filter(Boolean));
+      return NextResponse.json(
+        results.filter(Boolean).filter(r => (r?.matchScore || 0) >= 40).slice(0, 7)
+      );
     }
 
     return NextResponse.json({ error: "Invalid type" }, { status: 400 });

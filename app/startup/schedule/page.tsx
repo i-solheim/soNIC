@@ -385,7 +385,7 @@ export default function StartupSchedulePage() {
                 </div>
                 
                 <button 
-                  onClick={() => router.push('/startup')}
+                  onClick={() => router.push('/startup/dashboard')}
                   className="btn-outline px-6 py-3 rounded-xl font-medium flex items-center gap-2 hover:bg-surface transition-colors"
                 >
                   <ArrowRight className="w-4 h-4" />
