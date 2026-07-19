@@ -216,13 +216,32 @@ export default function PartnerMatchesPage() {
 
                       <div className="relative z-10 flex flex-col h-full pointer-events-none">
                         {/* Logo and Brand (Top Left) */}
-                        <div className="flex items-center gap-6 mb-auto">
+                        <div className="flex items-center gap-6">
                           <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center shadow-xl rotate-[-5deg] border-4 border-white/20 shrink-0">
                             <span className="text-3xl font-black text-slate-800">{startup.logo}</span>
                           </div>
                           <div className="text-white">
                             <h2 className="text-4xl font-extrabold tracking-tight drop-shadow-md m-0">{startup.name}</h2>
                             <p className="text-lg font-medium opacity-90 mt-1">{startup.tagline}</p>
+                          </div>
+                        </div>
+
+                        {/* Middle: About this startup */}
+                        <div className="mt-8 mb-auto">
+                          <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+                            <h3 className="text-white/80 text-sm font-bold uppercase tracking-wider mb-3">About Us</h3>
+                            <div className="flex flex-wrap gap-2 mb-4">
+                              {(startup.keywords || []).slice(0, 4).map((tag: string) => (
+                                <span key={tag} className="px-3 py-1 bg-white/20 rounded-lg text-white text-sm font-medium">
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                            {startup.description && (
+                              <p className="text-white/90 text-sm leading-relaxed line-clamp-3">
+                                {startup.description}
+                              </p>
+                            )}
                           </div>
                         </div>
 
