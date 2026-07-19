@@ -214,41 +214,61 @@ export default function PartnerMatchesPage() {
                         )}
                       </AnimatePresence>
 
-                      <div className="relative z-10 flex flex-col h-full pointer-events-none">
-                        {/* Logo and Brand (Top Left) */}
-                        <div className="flex items-center gap-6">
-                          <div className="w-20 h-20 rounded-2xl bg-white flex items-center justify-center shadow-xl rotate-[-5deg] border-4 border-white/20 shrink-0">
-                            <span className="text-3xl font-black text-slate-800">{startup.logo}</span>
-                          </div>
-                          <div className="text-white">
-                            <h2 className="text-4xl font-extrabold tracking-tight drop-shadow-md m-0">{startup.name}</h2>
-                            <p className="text-lg font-medium opacity-90 mt-1">{startup.tagline}</p>
-                          </div>
-                        </div>
-
-                        {/* Middle: About this startup */}
-                        <div className="mt-8 mb-auto">
-                          <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
-                            <h3 className="text-white/80 text-sm font-bold uppercase tracking-wider mb-3">About Us</h3>
-                            <div className="flex flex-wrap gap-2 mb-4">
-                              {(startup.keywords || []).slice(0, 4).map((tag: string) => (
-                                <span key={tag} className="px-3 py-1 bg-white/20 rounded-lg text-white text-sm font-medium">
-                                  {tag}
-                                </span>
-                              ))}
+                      <div className="relative z-10 flex flex-col h-full pointer-events-none p-4">
+                        {/* Top Header */}
+                        <div className="flex items-start justify-between">
+                          <div className="flex items-center gap-4">
+                            <div className="w-16 h-16 rounded-2xl bg-[#0f172a] flex items-center justify-center shrink-0 shadow-lg">
+                               <span className="text-2xl font-bold text-white">{startup.logo}</span>
                             </div>
-                            {startup.description && (
-                              <p className="text-white/90 text-sm leading-relaxed line-clamp-3">
-                                {startup.description}
+                            <div className="text-white">
+                              <h2 className="text-2xl font-bold tracking-tight m-0">{startup.name}</h2>
+                              <p className="text-[11px] font-bold opacity-70 mt-1 uppercase tracking-widest leading-snug max-w-[200px]">
+                                {startup.sector} · STARTUP
                               </p>
-                            )}
+                            </div>
+                          </div>
+
+                          {/* Circular Score */}
+                          <div className="relative w-16 h-16 shrink-0 flex items-center justify-center rounded-full border-[5px] border-[#eab308] bg-black/20 shadow-xl">
+                             <div className="text-center">
+                               <span className="block text-xl font-extrabold text-white leading-none">{startup.matchScore || 90}</span>
+                               <span className="block text-[8px] font-bold text-white/80 tracking-widest mt-1">MATCH</span>
+                             </div>
                           </div>
                         </div>
 
-                        {/* Blurred Call to Action Box */}
-                        <div className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 flex items-center justify-center group mt-auto transition-transform">
-                          <p className="text-white text-xl font-bold tracking-wide flex items-center gap-2 shadow-sm m-0">
-                            Click here for more details <ArrowRight className="w-5 h-5" />
+                        {/* Paragraph */}
+                        <p className="text-white/95 text-lg leading-relaxed mt-6 line-clamp-4">
+                          {startup.description || startup.shortReason}
+                        </p>
+
+                        {/* 3 Info Boxes */}
+                        <div className="grid grid-cols-3 gap-3 mt-6 mb-auto">
+                          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+                            <p className="text-[10px] font-bold text-white/50 tracking-wider uppercase mb-1">Core Tech</p>
+                            <p className="text-sm font-bold text-white leading-tight">
+                              {startup.keywords?.[0] || 'Tech'}
+                            </p>
+                          </div>
+                          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+                            <p className="text-[10px] font-bold text-white/50 tracking-wider uppercase mb-1">Stage</p>
+                            <p className="text-sm font-bold text-white leading-tight capitalize">
+                              {startup.stage || 'Seed'}
+                            </p>
+                          </div>
+                          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+                            <p className="text-[10px] font-bold text-white/50 tracking-wider uppercase mb-1">Funding</p>
+                            <p className="text-sm font-bold text-white leading-tight">
+                              {startup.budget || '$0'}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Button */}
+                        <div className="w-full bg-[#eab308] hover:bg-[#ca8a04] transition-colors rounded-xl py-4 flex items-center justify-center mt-6 shadow-lg">
+                          <p className="text-[#422006] text-lg font-bold tracking-wide flex items-center gap-2 m-0">
+                            See full profile <ChevronRight className="w-5 h-5" />
                           </p>
                         </div>
                       </div>
