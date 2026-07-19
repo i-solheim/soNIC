@@ -17,14 +17,16 @@ export function ChatInterface({
   matches,
   currentUserId,
   role,
+  initialActiveMatchId,
 }: {
   matches: any[];
   currentUserId: string;
   role: "startup" | "partner";
+  initialActiveMatchId?: string;
 }) {
   const { t } = useI18n();
   const [activeMatchId, setActiveMatchId] = useState<string | null>(
-    matches.length > 0 ? matches[0].id : null
+    initialActiveMatchId || (matches.length > 0 ? matches[0].id : null)
   );
   const [searchQuery, setSearchQuery] = useState("");
   const [messageText, setMessageText] = useState("");
